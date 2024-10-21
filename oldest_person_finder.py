@@ -28,10 +28,24 @@ while True:
         elif confirm != "yes": 
             retry_choice = input("Retry name, age, or both? (name/age/both): ") # If not, ask the user if they want to retry name, age, or both
             
+        while True:
             if retry_choice == "name":
                 input_name = input("Please input a new name: ")
-            
+                if any(ord(char) in invalid_characters for char in input_name):  # Check if the ASCII values of the name include invalid characters using ord() function
+                    print("Please input a valid name.")  # If yes, ask the user again for a valid name
+                continue 
 
+            elif retry_choice == "age":
+                while True:
+                    try:
+                        input_age = int(input("Please input a new age: "))
+                        break
+                    except:
+                        print("Please input a valid number for age.")
+
+                break
+
+            
     break  # Move on if the name is valid
     
     # Ask if the user wants to input another entry using a variable, if not, break the loop
