@@ -27,6 +27,10 @@ while True:
             break  # Move on if user confirms that the input is correct
         elif confirm != "yes": 
             retry_choice = input("Retry name, age, or both? (name/age/both): ") # If not, ask the user if they want to retry name, age, or both
+            
+            if retry_choice == "name":
+                input_name = input("Please input a new name: ")
+            
 
     break  # Move on if the name is valid
     
