@@ -42,8 +42,19 @@ while True:
                         break
                     except:
                         print("Please input a valid number for age.")
-                
 
+            elif retry_choice == "both":
+                while True:
+                    input_name = input("Please input a new name: ")
+                    if any(ord(char) in invalid_characters for char in input_name):  # Check if the ASCII values of the name include invalid characters using ord() function
+                        print("Please input a valid name.")  # If yes, ask the user again for a valid name
+                    break 
+                while True:
+                    try:
+                        input_age = int(input("Please input a new age: "))
+                        break
+                    except:
+                        print("Please input a valid number for age.")
             
     break  # Move on if the name is valid
     
