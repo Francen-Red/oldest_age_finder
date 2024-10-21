@@ -1,0 +1,11 @@
+1. Use an array specifically dictionary to store the user's input.
+2. Use loops for name and another one for age, since it should follow a valid format.
+3. Store the inputted information in the dictionary.
+4. Create a loop that will ask the user if they would like to retry the input for the name, age, or both.
+5. If "yes", break the loop. If "no", then prompt the user to retry the name, age, or both.
+6. After confirming the entry, ask the user if they want to input another information.
+If yes, loop through the past loops again. If no, proceed to comparison of age.
+7. Make oldest_name and oldest_age variables, store the first input of the user. 
+8. Compare oldest_age to the current input. If the current age is greater than oldest_age, 
+update oldest_age and set oldest_name to the current name corresponding to it.
+9. Display the oldest person's name and age.
