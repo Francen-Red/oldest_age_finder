@@ -2,7 +2,7 @@
 user_info = {}
 
 # Create a list of invalid characters for the name
-invalid_characters = [63, 123, 125, 91, 93, 36, 42, 37, 33, 38, 64, 94, 124, 92, 47, 60, 62] # Use ASCII values to avoid confusion or error
+invalid_characters = [63, 123, 125, 91, 93, 36, 42, 37, 33, 38, 64, 94, 124, 92, 47, 60, 62, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57] # Use ASCII values to avoid confusion or error
 
 # Main loop to repeatedly ask for user inputs until they decide to stop
 while True:
