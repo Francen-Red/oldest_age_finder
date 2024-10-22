@@ -27,12 +27,12 @@ while True:
 
 # Create a loop for the retry confirmation   
     while True:
-        confirm = input(f"Name = {input_name}, Age = {input_age}. Is this correct? (yes or no): ") # Use a function to display the user's input
+        confirm = input(f"Name = {input_name}, Age = {input_age}. Is this correct? (yes or no): ").lower() # Use a function to display the user's input
         if confirm == "yes":
             user_info[input_name] = {"age": input_age}  # Store the valid input in the dictionary
             break  # Move on if user confirms that the input is correct
         elif confirm != "yes": 
-            retry_choice = input("Retry name, age, or both? (name/age/both): ") # If not, ask the user if they want to retry name, age, or both
+            retry_choice = input("Retry name, age, or both? (name/age/both): ").lower() # If not, ask the user if they want to retry name, age, or both
             
             if retry_choice == "name":
                 while True:
@@ -63,7 +63,7 @@ while True:
                         print("Please input a valid number for age.")  # If age is not valid, print an error message
             
 # Ask if the user wants to input another entry using a variable
-    another_entry = input("Do you want to input another entry? (yes/no): ")
+    another_entry = input("Do you want to input another entry? (yes/no): ").lower()
     if another_entry != "yes":
         break  # If not, break the loop
     
