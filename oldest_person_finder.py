@@ -69,14 +69,20 @@ while True:
     
 # Create oldest_name and oldest_age variables, store the first input of the user (index 0)
 if user_info:
-    oldest_name = list(user_info.keys())[0]  # First name
-    oldest_age = user_info[oldest_name]["age"]  # First age
+    oldest_names = [list(user_info.keys())[0]]  # First name
+    oldest_age = user_info[oldest_names[0]]["age"]  # First age
 
 # Compare the age in oldest_age to the current age (new entry)
 for name, info in list(user_info.items())[1:]:
         if info["age"] > oldest_age:
             oldest_age = info["age"]   # If the new input is greater than the age in oldest_age variable, update oldest_age and oldest_name
             oldest_name = name
+        elif info["age"] == oldest_age:   # If the new input is equal to  the age in oldest_age variable, append the name to the list
+            oldest_names.append(name)
 
     # Print the oldest person using a function that will print the oldest_name and oldest_age
-        print(f"The oldest person is {oldest_name} with age {oldest_age}.")
+if len(oldest_names) == 1:  # If only 1 person has the oldest age,
+    print(f" The oldest person is {oldest_names[0]} with age {oldest_age}")  # Print only one name and age
+else:    # If more than 1 person has the oldest age,
+    print(f"The oldest people are {', '.join(oldest_names)} with age {oldest_age}")  # Print their names and age
+
